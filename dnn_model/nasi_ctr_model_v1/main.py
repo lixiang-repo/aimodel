@@ -130,17 +130,17 @@ def main(argv):
         with open(FLAGS.file_list) as f:
             filenames = [l.strip("\n") for l in f]
 
+    tf.compat.v1.logging.info("filenames>>>%s" % filenames[:10])
     if FLAGS.mode == "export":
         params["lr"] = 0.0
         FLAGS.mode = "train"
         train(filenames, params, model_config, 1)
+
         params["warm_path"] = ""
         FLAGS.mode = "export"
         train([], params, model_config)
-        return
-
-    tf.compat.v1.logging.info("filenames>>>%s" % filenames[:10])
-    if FLAGS.mode == "train":
+    
+    elif FLAGS.mode == "train":
         n = len(filenames) // 336 + 1
         for i in range(n):
             files = filenames[i * 336:(i + 1) * 336]
