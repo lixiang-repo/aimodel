@@ -27,7 +27,7 @@ while [ "${last_time}" != "${end_date}" ]; do
     rm -rf ckpt/*/events.out.tfevents* ckpt/*/eval
     cp -r ckpt ${time_str}
 
-    sh ${code_dir}/bin/eval.sh ${last_time}
+    cd ${code_dir}/bin && sh -x eval.sh ${last_time} && cd -
     
   fi
 done
