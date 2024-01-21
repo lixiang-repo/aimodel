@@ -1,0 +1,51 @@
+{
+    "map": {
+        "recall": [
+            {
+                "map": {
+                    "advertiser_id": "60",
+                    "cid": "1980",
+                    "crid": "14091",
+                    "adid": "3343",
+                    "adtype": "_",
+                    "size": "_"
+                }
+            }
+        ]
+    },
+    "userInfo": {
+        "trackingId": "trackingId",
+        "version": "nasi_ctr_v1",
+        "uuid": "ci8j56o79j8d",
+        "userMap": {},
+        "contextMap": {
+            "deviceid": "5aec11f0-6e2a-4ded-b1c8-75c7cfddcad3",
+            "devicetype": "oaid",
+            "os": "1",
+            "osv": "13.0.0",
+            "pub": "104",
+            "bundle": "com.gimica.ballbounce",
+            "subcat": "_",
+            "tagid": "1799487",
+            "make": "samsung",
+            "model": "sm-s901b",
+            "country": "GB",
+            "state": "ENG",
+            "city": "London",
+            "language": "en",
+            "released_at": "_",
+            "modelprice": "_",
+            "chipset": "_",
+            "camera_pixels": "_",
+            "sip": "5.80.89.199",
+            "ip": "5.80.89.199",
+            "ua": "Mozilla/5.0 (Linux; Android 13; SM-S901B Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/119.0.6045.66 Mobile Safari/537.36 WindVane/3.0.2",
+            "hour": "17",
+            "appcat": "_",
+            "display": "MTG",
+            "reward": "",
+            "month": "12",
+            "app_id": "com.zhiliaoapp.musically"
+        }
+    }
+}
