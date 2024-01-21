@@ -43,7 +43,7 @@ ps_num = len(tf_config.get('cluster', {}).get('ps', []))
 task_number = len(tf_config.get('cluster', {}).get('worker', [])) + 1
 task_idx = task_idx + 1 if task_type == 'worker' else task_idx
 
-tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.DEBUG)
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.INFO)
 
 
 def train(filenames, params, model_config, steps=None):
@@ -150,10 +150,11 @@ def main(argv):
             train(files, params, model_config)
             tf.compat.v1.logging.info("waste time>>>%s>>>%s mins" % (n, (time.time() - t1) / 60))
 
-            t2 = time.time()
-            params["restrict"] = True
-            train(files, params, model_config, 1)
-            tf.compat.v1.logging.info("restrict waste time>>>%s mins" % ((time.time() - t2) / 60))
+            if FLAGS.type == "update":
+                t2 = time.time()
+                params["restrict"] = True
+                train(files, params, model_config, 1)
+                tf.compat.v1.logging.info("restrict waste time>>>%s mins" % ((time.time() - t2) / 60))
     elif FLAGS.mode == "feature_eval":
         train(filenames, params, model_config)
         with open("./slot.conf") as rf:
@@ -173,3 +174,4 @@ def main(argv):
 
 if __name__ == "__main__":
     app.run(main)
+
