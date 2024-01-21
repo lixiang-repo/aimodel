@@ -15,9 +15,9 @@ dirname = os.path.dirname(os.path.abspath(__file__))
 
 def build_bucket_custom(features, feature_name, boundary):
     """分桶"""
-    raw_data = tf.cast(tf.ones_like(features[feature_name]), tf.float32)
+    raw_data = tf.cast(tf.zeros_like(features[feature_name]), tf.float32)
     for index in range(len(boundary)):
-        temp_data = tf.cast(tf.ones_like(features[feature_name]), tf.float32) * (index + 2)
+        temp_data = tf.cast(tf.ones_like(features[feature_name]), tf.float32) * (index + 1)
         value_data = tf.cast(tf.ones_like(features[feature_name]), tf.float32) * boundary[index]
         raw_data = tf.where(tf.cast(features[feature_name], tf.float32) >= value_data, temp_data, raw_data)
     return tf.cast(raw_data, dtype=tf.int64)
@@ -145,6 +145,12 @@ def model_fn(features, labels, mode, params):
             eval_metric_ops['slot_%s' % params["slot"]] = eval_metric_ops[k]
 
     ######################train################################
+    _hooks = None
+    if params["warm_path"]:
+        tf.compat.v1.logging.info("%s warm start>>>%s" % (mode, params["warm_path"]))
+        # restore_hook = de.WarmStartHook(params["warm_path"], [".*emb.*"])
+        restore_hook = RestoreTfraVariableHook(params["warm_path"], [embeddings])
+        _hooks = [restore_hook]
     if mode == tf.estimator.ModeKeys.TRAIN:
         ######################optimizer################################
         #sparse_opt = tf.compat.v1.train.GradientDescentOptimizer(learning_rate=1)
@@ -175,31 +181,21 @@ def model_fn(features, labels, mode, params):
 
         log_hook = tf.compat.v1.estimator.LoggingTensorHook(loggings, every_n_iter=500)
         ######################WarmStartHook################################
-        training_chief_hooks = None
-        if params["warm_path"]:
-            tf.compat.v1.logging.info("train warm start>>>%s" % params["warm_path"])
-            # restore_hook = de.WarmStartHook(params["warm_path"], [".*emb.*"])
-            restore_hook = RestoreTfraVariableHook(params["warm_path"], [embeddings])
-            training_chief_hooks = [restore_hook]
-        return tf.estimator.EstimatorSpec(mode=mode,
-                                          predictions=model.predictions,
-                                          loss=model.loss,
-                                          train_op=train_op,
-                                          training_hooks=[log_hook],
-                                          training_chief_hooks=training_chief_hooks)
+        return tf.estimator.EstimatorSpec(
+            mode=mode, predictions=model.predictions, loss=model.loss,
+            train_op=train_op,
+            training_hooks=[log_hook],
+            training_chief_hooks=_hooks
+        )
     ######################infer################################
     elif mode in [tf.estimator.ModeKeys.PREDICT, tf.estimator.ModeKeys.EVAL]:
-        _hooks = None
-        if params["warm_path"]:
-            tf.compat.v1.logging.info("infer warm start>>>%s" % params["warm_path"])
-            # restore_hook = de.WarmStartHook(params["warm_path"], [embeddings])
-            restore_hook = RestoreTfraVariableHook(params["warm_path"], [embeddings])
-            _hooks = [restore_hook]
-
         export_outputs = {
             "pred": tf.compat.v1.estimator.export.PredictOutput(model.outputs)
         }
-        return tf.estimator.EstimatorSpec(mode, model.predictions, model.loss, export_outputs=export_outputs,
-                                          prediction_hooks=_hooks, evaluation_hooks=_hooks,
-                                          eval_metric_ops=eval_metric_ops)
+        return tf.estimator.EstimatorSpec(
+                mode, model.predictions, model.loss, export_outputs=export_outputs,
+                prediction_hooks=_hooks, evaluation_hooks=_hooks,
+                eval_metric_ops=eval_metric_ops
+        )
 
+:
