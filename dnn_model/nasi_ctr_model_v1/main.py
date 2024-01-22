@@ -33,6 +33,7 @@ flags.DEFINE_string('file_list', '', 'file list')
 flags.DEFINE_string('slot', "", 'miss slot')
 FLAGS = flags.FLAGS
 
+dirname = os.path.dirname(os.path.abspath(__file__))
 logger = logging.getLogger('tensorflow')
 logger.propagate = False
 
@@ -135,7 +136,6 @@ def main(argv):
         params["lr"] = 0.0
         FLAGS.mode = "train"
         train(filenames, params, model_config, 1)
-
         params["warm_path"] = ""
         FLAGS.mode = "export"
         train([], params, model_config)
@@ -157,8 +157,8 @@ def main(argv):
                 tf.compat.v1.logging.info("restrict waste time>>>%s mins" % ((time.time() - t2) / 60))
     elif FLAGS.mode == "feature_eval":
         train(filenames, params, model_config)
-        with open("./slot.conf") as rf:
-            slots = [re.split(" +", l)[0] for l in rf]
+        with open("%s/slot.conf" % dirname) as rf:
+            slots = [re.split(" +", l)[0] for l in rf if not (l.startswith("#") or l.startswith("isclick"))]
         for slot in slots:
             FLAGS.slot = params["slot"] = slot
             train(filenames, params, model_config)
@@ -174,4 +174,3 @@ def main(argv):
 
 if __name__ == "__main__":
     app.run(main)
-

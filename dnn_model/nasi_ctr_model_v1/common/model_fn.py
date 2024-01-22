@@ -198,4 +198,3 @@ def model_fn(features, labels, mode, params):
                 eval_metric_ops=eval_metric_ops
         )
 
-:
