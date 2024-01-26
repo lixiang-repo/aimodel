@@ -23,10 +23,10 @@ def _parse_type(type_str):
     elif type_str == 'STRING':
         return tf.string
     else:
-        arr_re = re.compile("ARRAY<(.*)>")
+        arr_re = re.compile("ARRAY<(.*)>\(?(\d*)\)?")
         t = arr_re.findall(type_str)
-        if len(t) == 1:
-            return _parse_type(t[0])
+        if len(t) == 1 and isinstance(t[0], tuple) and len(t[0]) == 2:
+            return _parse_type(t[0][0]), 50 if t[0][1] == "" else int(t[0][1])
         raise TypeError("Unsupport type", type_str)
 
 
@@ -43,7 +43,7 @@ def get_slot_list():
 def get_example_fmt():
     example_fmt = OrderedDict()
     slots = get_slot_list()
-    with open("%s/../feature.conf" % dirname) as f:
+    with open("%s/../schema.conf" % dirname) as f:
         for line in f:
             if line.startswith("#"):
                 continue
@@ -51,7 +51,8 @@ def get_example_fmt():
             # if name not in slots:
             #     continue
             if "ARRAY" in line:
-                example_fmt[name] = tf.io.FixedLenFeature([50], _parse_type(type_str))
+                dtype, length = _parse_type(type_str)
+                example_fmt[name] = tf.io.FixedLenFeature([length], dtype)
             else:
                 example_fmt[name] = tf.io.FixedLenFeature((), _parse_type(type_str))
     return example_fmt
@@ -60,7 +61,7 @@ def get_example_fmt():
 def get_sequence_example_fmt():
     ctx_fmt, seq_fmt = OrderedDict(), OrderedDict()
     slots = get_slot_list()
-    with open("%s/../feature.conf" % dirname) as f:
+    with open("%s/../schema.conf" % dirname) as f:
         for line in f:
             if line.startswith("#"):
                 continue
@@ -71,16 +72,18 @@ def get_sequence_example_fmt():
             #     continue
             if "@user" in line or "@ctx" in line:
                 if "ARRAY" in line:
-                    ctx_fmt[name] = tf.io.FixedLenFeature([50], _parse_type(type_str))
+                    dtype, length = _parse_type(type_str)
+                    ctx_fmt[name] = tf.io.FixedLenFeature([length], dtype)
                 else:
                     ctx_fmt[name] = tf.io.FixedLenFeature((), _parse_type(type_str))
             elif "@item" in line:
                 if "ARRAY" in line:
-                    seq_fmt[name] = tf.io.FixedLenSequenceFeature([50], _parse_type(type_str))
+                    dtype, length = _parse_type(type_str)
+                    seq_fmt[name] = tf.io.FixedLenSequenceFeature([length], dtype)
                 else:
                     seq_fmt[name] = tf.io.FixedLenSequenceFeature((), _parse_type(type_str))
             else:
-                raise TypeError("not in @ctx and @seq")
+                raise TypeError("not in @ctx @ctx @item")
 
     return ctx_fmt, seq_fmt
 

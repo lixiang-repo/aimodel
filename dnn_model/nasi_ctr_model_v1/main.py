@@ -158,7 +158,7 @@ def main(argv):
     elif FLAGS.mode == "feature_eval":
         train(filenames, params, model_config)
         with open("%s/slot.conf" % dirname) as rf:
-            slots = [re.split(" +", l)[0] for l in rf if not (l.startswith("#") or l.startswith("isclick"))]
+            slots = [re.split(" +", l)[0] for l in rf if not (l.startswith("#") or l.startswith("label"))]
         for slot in slots:
             FLAGS.slot = params["slot"] = slot
             train(filenames, params, model_config)

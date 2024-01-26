@@ -4,11 +4,10 @@ import tensorflow as tf
 
 import tensorflow_recommenders_addons as tfra
 import tensorflow_recommenders_addons.dynamic_embedding as de
-from model import DnnModel, get_table_name
+from model import DnnModel, get_table_name, boundary_map
 from common.metrics import evaluate
 from common.utils import RestoreTfraVariableHook
 from collections import OrderedDict
-from config import split_dict
 import os, re
 dirname = os.path.dirname(os.path.abspath(__file__))
 
@@ -55,12 +54,12 @@ def model_fn(features, labels, mode, params):
     text_map = {}
     for k in features:
         tf.compat.v1.logging.debug("features>>>%s>>>%s>>>%s" % (k, features[k].shape, features[k].dtype))
-        if k.startswith("isclick"):
+        if k.startswith("label"):
             continue
         text_map[k] = features[k]
         ############bucketing#########
-        if k in split_dict:
-            text_map[k] = build_bucket_custom(text_map, k, split_dict[k])
+        if k in boundary_map:
+            text_map[k] = build_bucket_custom(text_map, k, boundary_map[k])
         if text_map[k].dtype != tf.string:
             text_map[k] = tf.as_string(text_map[k])
         if len(text_map[k].shape) == 1:
@@ -73,7 +72,7 @@ def model_fn(features, labels, mode, params):
     hash_map = {}
     with open("%s/../slot.conf" % dirname) as f:
         for l in f:
-            if l.startswith("#") or l.startswith("isclick"):
+            if l.startswith("#") or l.startswith("label"):
                 continue
             l = re.split(" +", l.strip("\n"))[0]
             if l in slot_list: continue
