@@ -14,7 +14,7 @@ class DnnModel:
         super(DnnModel, self).__init__()
         self.is_training = is_training
         ######################label################################
-        label1 = features["isclick"]
+        label1 = features["label"]
         label1 = tf.cast(tf.reshape(label1, (-1,)), dtype=tf.float32)
 
         self.labels = [label1]
