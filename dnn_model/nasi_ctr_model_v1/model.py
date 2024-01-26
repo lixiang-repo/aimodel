@@ -25,7 +25,7 @@ class DnnModel:
         #slot_list.remove("ui_etype")
         input_emb = tf.concat([tf.multiply(tf.Variable(1.0, name="GateW_%s" % k), emb_map[k]) for k in slot_list], axis=1)
         ######################forward################################
-        outs = [self.build_layers(input_emb, [512, 512, 512, 512, 256, 256], "hid")]
+        outs = [self.build_layers(input_emb, [512, 512, 512, 512, 256, 256], "hid", "relu")]
         self.logits = []
         for i, out in enumerate(outs, start=1):
             logit = self.build_layers(out, [256, 128, 1], "task%s" % i)
