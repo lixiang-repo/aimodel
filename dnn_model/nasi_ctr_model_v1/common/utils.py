@@ -21,7 +21,7 @@ def get_files(file_path, file_list, suffix=""):
     return file_list if suffix == '' or suffix is None else list(filter(lambda x: x.endswith(suffix), file_list))
 
 
-def write_donefile(time_str, model_type, donefile="donefile"):
+def write_donefile(time_str, model_type, donefile):
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     if not os.path.exists(donefile):
         open(donefile, "w").close()

@@ -166,7 +166,7 @@ def main(argv):
         train(filenames, params, model_config)
 
     if FLAGS.mode == "train" and task_type == "chief" and int(task_idx) == 0:
-        write_donefile(FLAGS.time_str, FLAGS.type)
+        write_donefile(FLAGS.time_str, FLAGS.type, "%s/donefile" % FLAGS.model_dir)
 
     msg = "total waste>>>%s>>>%s>>>%s>>>%s>>>%s>>>%s mins" % (task_type, task_idx, FLAGS.mode, FLAGS.type, FLAGS.time_str, (time.time() - t0) / 60)
     tf.compat.v1.logging.info(msg)

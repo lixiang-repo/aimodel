@@ -82,32 +82,18 @@ spark = (SparkSession
          .config("spark.yarn.queue", "root.jupyter")
          .getOrCreate())
 sc = spark.sparkContext
-dtype_map = dict(spark.table('dsp.rm_show_click_v2').dtypes)
 
-
-def fill_double(v):
+def parse_float(v):
     try:
         v = float(v)
     except:
         v = -1.0
     return float(v)
 
-
-def fill_na(row):
-    row = row.asDict()
-    ans = {}
-    for k, v in row.items():
-        dtype = dtype_map.get(k)
-        if v is None or str(v).lower() in ("", "null"):
-            if dtype == 'double':
-                v = -1.0
-            elif dtype == 'tinyint':
-                v = -1
-            elif dtype == 'string':
-                v = '_'
-        ans[k] = v
-    return ans
-
+def fill_na(x):
+    if x is None or x == "":
+        x = "_"
+    return x
 
 def map_union(lst):
     ans = {}
@@ -116,7 +102,7 @@ def map_union(lst):
     return ans
 
 
-contexts = ['display', 'cid', 'bundle', 'pub', 'subcat', 'adid', 'advertiser_id', 'tagid', 'app_id', 'size', 'crid',
+contexts = ['display', 'cid', 'bundle', 'pub', 'subcat', 'adid', 'advertiser_id', 'tagid', 'size', 'crid',
             'make', 'state', 'adtype', 'month', 'camera_pixels', 'osv', 'reward', 'appcat', 'os', 'chipset',
             'devicetype', 'city', 'model', 'hour']
 yd = parse(args.date)
@@ -128,8 +114,7 @@ dt_condition = " or ".join([
 
 table = spark.table('dsp.rm_show_click_v2') \
     .where(dt_condition) \
-    .where("isclick in (0, 1) and if(btype is null, '1', btype) != '2'")
-table = spark.createDataFrame(table.rdd.map(fill_na)).persist()
+    .where("isclick in (0, 1) and if(btype is null, '1', btype) != '2'").persist()
 
 base_path = "hdfs://nameservice1/user/hive/warehouse/lixiang.db/%s" % args.task
 codec = "org.apache.hadoop.io.compress.GzipCodec"
@@ -138,6 +123,10 @@ for evt  in ["imp", "click"]:
         df = table
     elif evt == "click":
         df = table.where("isclick = 1")
+    dtypes = dict(df.dtypes)
+    for k, dtype in dtypes.items():
+        if dtype == "string":
+            df = df.withColumn(k, F.udf(fill_na)(k))
 
     data = df.groupBy("deviceid").count().rdd.map(lambda x: (x["deviceid"], {"cnt": x["count"]}))
     paths = []
