@@ -4,22 +4,14 @@ import os
 import datetime
 import tensorflow as tf
 from sklearn import metrics
+import re
 from tensorflow.python.ops import io_ops
 from tensorflow.python.training import checkpoint_management
 from tensorflow.python.platform import gfile
 from collections import defaultdict
-from common.dataset import get_example_fmt, get_sequence_example_fmt
+from common.dataset import get_example_fmt, get_sequence_example_fmt, _parse_type
 
-
-def get_files(file_path, file_list, suffix=""):
-    for file in os.listdir(file_path):
-        if os.path.isdir(os.path.join(file_path, file)):
-            get_files(os.path.join(file_path, file), file_list, suffix)
-        else:
-            file_list.append(os.path.join(file_path, file))
-
-    return file_list if suffix == '' or suffix is None else list(filter(lambda x: x.endswith(suffix), file_list))
-
+dirname = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def write_donefile(time_str, model_type, donefile):
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -77,6 +69,37 @@ def serving_input_receiver_dense_fn():
         "record_type": record_type,
         "input": inp,
     })
+
+
+def serving_input_receiver_dense_fn1():
+    tf.compat.v1.disable_eager_execution()
+    features = {}
+    size = tf.compat.v1.placeholder(tf.int64, shape=(), name="size")
+    with open("%s/schema.conf" % dirname) as f:
+        for line in f:
+            if line.startswith("#"):
+                continue
+            name, type_str = re.split(" +", line.strip("\n"))[:2]
+            if "@user" in line or "@ctx" in line:
+                if "ARRAY" in line:
+                    dtype, length = _parse_type(type_str)
+                    x = tf.compat.v1.placeholder(dtype, shape=(None,), name=name)
+                    features[name] = tf.tile(tf.expand_dims(x, 0), [size, 1])
+                else:
+                    dtype = _parse_type(type_str)
+                    x = tf.compat.v1.placeholder(dtype, shape=(), name=name)
+                    features[name] = tf.tile(tf.expand_dims(tf.reshape(x, [-1]), 0), [size, 1])
+            elif "@item" in line:
+                if "ARRAY" in line:
+                    dtype, length = _parse_type(type_str)
+                    features[name] = tf.compat.v1.placeholder(dtype, shape=(None, length), name=name)
+                else:
+                    dtype = _parse_type(type_str)
+                    features[name] = tf.compat.v1.placeholder(dtype, shape=(None,), name=name)
+            else:
+                raise TypeError("Unsupport line", line)
+
+    return tf.estimator.export.build_raw_serving_input_receiver_fn(features)
 
 
 def restore_tfra_variable(ckpt_path, variable):

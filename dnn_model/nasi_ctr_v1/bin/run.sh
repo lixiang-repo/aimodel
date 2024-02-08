@@ -23,10 +23,10 @@ while [ "${last_time}" != "${end_date}" ]; do
   ############################################################
   #backup and export serving model
   if [ ${time_str} -ge 202301012359 ]; then
-    #cd ${code_dir}/bin && sh -x export.sh && cd -
     rm -rf ckpt/*/events.out.tfevents* ckpt/*/eval
     cp -r ckpt ${time_str}
 
+    cd ${code_dir}/bin && sh -x export.sh && cd -
     cd ${code_dir}/bin && sh -x eval.sh ${last_time} && cd -
     
   fi

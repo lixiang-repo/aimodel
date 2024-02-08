@@ -123,9 +123,12 @@ def main(argv):
     if len(FLAGS.file_list) == 0:
         time_format = parse(FLAGS.time_str).strftime(FLAGS.time_format)
         filenames = glob.glob("%s/%s" % (FLAGS.data_path, time_format))
+        i = 0
         while len(filenames) < 5:
-            tf.compat.v1.logging.info("file not exits %s %s" % ("%s/%s" % (FLAGS.data_path, time_format), filenames))
-            time.sleep(3600)
+            i += 1
+            if i % 100 == 0:
+                tf.compat.v1.logging.info("file not exits %s %s" % ("%s/%s" % (FLAGS.data_path, time_format), filenames))
+            time.sleep(300)
             filenames = glob.glob("%s/%s" % (FLAGS.data_path, time_format))
     else:
         with open(FLAGS.file_list) as f:
@@ -166,7 +169,7 @@ def main(argv):
         train(filenames, params, model_config)
 
     if FLAGS.mode == "train" and task_type == "chief" and int(task_idx) == 0:
-        write_donefile(FLAGS.time_str, FLAGS.type, "%s/donefile" % FLAGS.model_dir)
+        write_donefile(FLAGS.time_str, FLAGS.type, "%s/../../donefile" % FLAGS.model_dir)
 
     msg = "total waste>>>%s>>>%s>>>%s>>>%s>>>%s>>>%s mins" % (task_type, task_idx, FLAGS.mode, FLAGS.type, FLAGS.time_str, (time.time() - t0) / 60)
     tf.compat.v1.logging.info(msg)

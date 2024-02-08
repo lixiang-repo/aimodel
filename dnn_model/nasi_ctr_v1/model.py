@@ -7,7 +7,8 @@ def get_table_name(k):
     return k
 
 boundary_map = {}
-boundary_map['bid_floor'] = [-99, -0.001, 0.03, 0.1, 0.12, 0.15, 0.17, 0.2, 0.26, 0.3, 0.35, 37.37]
+boundary_map["modelprice"] = [0, 80.0, 158.316, 220.0, 313.0, 500.0, 2758.583]
+boundary_map['bid_floor'] = [-0.001, 0.01, 0.1, 0.12, 0.17, 0.26, 0.3, 0.38, 38.39]
 
 class DnnModel:
     def __init__(self, emb_map, features, slot_list, is_training=True):
