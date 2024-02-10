@@ -12,10 +12,6 @@ if __name__ == "__main__":
     # from flags import FLAGS
     file_pattern = ["/data/lixiang/rm_show_click_v2/2023/12/01/part-r-00000"]
     next_element = input_fn(file_pattern, batch_size=1, shuffle=False)
-    example_fmt = get_example_fmt()
-
-    with open("./body.json") as f:
-        body = json.load(f)
 
     tmp = []
     with tf.Session() as sess:
@@ -28,25 +24,32 @@ if __name__ == "__main__":
                 # print(serialized_examples)
                 if len(tmp) >= 1000:
                     break
-                # sess.run(fetches=train, feed_dict={x: image, y_: label})
-                # if i % 100 == 0:
-                #     train_accuracy = sess.run(fetches=accuracy, feed_dict={x: image, y_: label})
-                #     print(i, "accuracy=", train_accuracy)
-                # i = i + 1
         except tf.errors.OutOfRangeError:
             print("end!")
+
     serialized_examples = tmp[0]
     for k, v in serialized_examples.items():
         if isinstance(v[0], bytes):
             serialized_examples[k] = v[0].decode("utf-8")
         else:
             serialized_examples[k] = v[0]
-    for k in body["userInfo"]["contextMap"].keys():
+
+    with open("./body.json") as f:
+        body = json.load(f)
+
+    for k in body["userInfo"]["userMap"]:
+        if k not in serialized_examples: continue
+        body["userInfo"]["userMap"][k] = serialized_examples[k]
+
+    for k in body["userInfo"]["contextMap"]:
+        if k not in serialized_examples: continue
         body["userInfo"]["contextMap"][k] = serialized_examples[k]
+
     for k in body["map"]["recall"][0]["map"]:
+        if k not in serialized_examples: continue
         body["map"]["recall"][0]["map"][k] = serialized_examples[k]
 
-    with open("./reqbody.json", "w") as wf:
+    with open("./body.json", "w") as wf:
         json.dump(body, wf, indent=4)
 
     print(body)

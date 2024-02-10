@@ -73,8 +73,9 @@ def train(filenames, params, model_config, steps=None):
             df = df.reset_index().drop_duplicates(["id"] + list(range(9))).sort_values("id")
             df.to_csv("./embeddings.csv", sep="\t", index=False)
         else:
-            # metric_map = get_metrics(df)
-            df.to_csv("pred_%s_%s.csv" % (task_type, task_idx), sep="\t")
+            model_dir = os.path.dirname(os.path.dirname(FLAGS.model_dir))
+            df.to_csv("%s/logs/pred_%s.csv" % (model_dir, FLAGS.time_str), sep="\t")
+            
         # df = df.reset_index().drop_duplicates(["id"] + list(range(9))).sort_values("id")
         # df.to_csv("./embeddings.csv", sep="\t", index=False)
 

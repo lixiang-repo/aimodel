@@ -2,7 +2,6 @@
 code_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && cd .. && pwd)"
 . ${code_dir}/bin/conf.sh && cd ${model_dir}
 
-sh ${code_dir}/bin/stop.sh
 TF_CONFIG='{}'
 time_str=`awk '{print $1}' ${model_dir}/donefile|tail -1`
 # time_str=202312022359
