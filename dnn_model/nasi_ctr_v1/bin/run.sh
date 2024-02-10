@@ -5,7 +5,8 @@ code_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && cd .. && pwd
 while [ "${last_time}" != "${end_date}" ]; do
   last_time=$(awk '{print $1}' ${donefile} | tail -1)
   if [ "${last_time}" = "" ]; then
-    last_time=${start_date}
+    # last_time=${start_date}
+    last_time=$(python3 -c "from dateutil.parser import parse;import datetime;print((parse(str("${start_date}")) - datetime.timedelta(hours=${delta})).strftime('%Y%m%d%H%M'))")
     warm_path=""
   else
     warm_path="${model_dir}/ckpt/update"
