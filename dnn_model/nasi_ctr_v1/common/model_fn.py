@@ -10,6 +10,7 @@ from common.utils import RestoreTfraVariableHook
 from collections import OrderedDict
 import os, re
 dirname = os.path.dirname(os.path.abspath(__file__))
+logger = tf.compat.v1.logging
 
 
 def build_bucket_custom(features, feature_name, boundary):
@@ -36,24 +37,24 @@ def model_fn(features, labels, mode, params):
     is_training = mode == tf.estimator.ModeKeys.TRAIN
     embedding_size = 9
     ######################print features################################
-    tf.compat.v1.logging.warning("type>>>%s>>>mode>>>%s>>>start" % (params["type"], mode))
+    logger.warning("start>>>%s>>>%s" % (params["type"], mode))
+    logger.info("strategy>>>%s" % tf.compat.v1.distribute.get_strategy())
     ######################devide################################
     if is_training:
-        initializer = tf.keras.initializers.RandomNormal(-1, 1)
+        devices_info = ["/job:ps/replica:0/task:{}/CPU:0".format(i) for i in range(params["ps_num"])]
+        initializer = tf.compat.v1.random_normal_initializer(0, 1)
+        
     else:
-        initializer = tf.compat.v1.initializers.zeros()
-    if is_training and params["ps_num"] > 0:
-        ps_list = ["/job:ps/replica:0/task:{}/CPU:0".format(i) for i in range(params["ps_num"])]
-    else:
-        ps_list = ["/job:localhost/replica:0/task:0/CPU:0"] * params["ps_num"]  ##单机，分布式注释
-    tf.compat.v1.logging.info("ps_list>>>%s" % ps_list)
-    tf.compat.v1.logging.info("strategy>>>%s" % tf.compat.v1.distribute.get_strategy())
+        devices_info = ["/job:localhost/replica:0/task:{}/CPU:0".format(0) for i in range(params["ps_num"])]
+        initializer = tf.compat.v1.zeros_initializer()
+    if len(devices_info) == 0: devices_info = None
+    logger.info("------ dynamic_embedding devices_info is {}-------".format(devices_info))
     ######################slot reshape################################
     # (None,), (None, 50)
     mask_dict = {}
     text_map = {}
     for k in features:
-        tf.compat.v1.logging.debug("features>>>%s>>>%s>>>%s" % (k, features[k].shape, features[k].dtype))
+        logger.debug("features>>>%s>>>%s>>>%s" % (k, features[k].shape, features[k].dtype))
         if k.startswith("label"):
             continue
         text_map[k] = features[k]
@@ -65,9 +66,10 @@ def model_fn(features, labels, mode, params):
         if len(text_map[k].shape) == 1:
             text_map[k] = tf.reshape(text_map[k], [-1, 1])
         else:
-            tf.compat.v1.logging.debug("mask>>>%s" % k)
+            logger.debug("mask>>>%s" % k)
             mask_dict[k] = mask_tensor(text_map[k])
     ######################slot################################
+    hash_collision_inps = []
     slot_list = []
     hash_map = {}
     with open("%s/../slot.conf" % dirname) as f:
@@ -78,21 +80,26 @@ def model_fn(features, labels, mode, params):
             if l in slot_list: continue
             slot_list.append(l)
             inputs = [get_table_name(k) for k in l.split("-")] + [text_map[k] for k in l.split("-")]
+            inps = tf.strings.join(inputs, "\001\001")
             # hash_map[l] = tf.strings.to_hash_bucket_fast(tf.strings.join(inputs, "\001\001"), 2 ** 63 - 1)
-            hash_map[l] = tf.strings.to_hash_bucket_strong(tf.strings.join(inputs, "\001\001"), 2 ** 63 - 1, [1, 2])
-    tf.compat.v1.logging.info("slot_list>>>%s" % slot_list)
+            hash_map[l] = tf.strings.to_hash_bucket_strong(inps, 2 ** 63 - 1, [1, 2])
+
+            #hash_collision
+            hash_collision_inps.append(tf.reshape(inps, [-1, 1]))
+
+    logger.info("slot_list>>>%s" % slot_list)
     ######################dnn################################
     assert len(slot_list) == len(set(slot_list))
     feature_list = [hash_map[k] for k in slot_list]
     ids = tf.concat(feature_list, axis=1)  # [None, 1] concat
-    tf.compat.v1.logging.debug("ids_shape>>>%s" % ids.shape)
+    logger.info("ids_shape>>>%s" % ids.shape)
     # with tf.name_scope("embedding"):
     groups = []
     embeddings = tfra.dynamic_embedding.get_variable(
         name="embeddings",
         dim=embedding_size,
-        devices=ps_list,
-        trainable=params["type"] == "update",
+        devices=devices_info,
+        trainable=params["type"] == "update" and is_training,
         initializer=initializer)
     policy = tfra.dynamic_embedding.TimestampRestrictPolicy(embeddings)
     update_tstp_op = policy.apply_update(ids)
@@ -115,16 +122,23 @@ def model_fn(features, labels, mode, params):
     for k in slot_list:
         if k == slot:
             emb_map[slot] = tf.zeros_like(emb_map[slot], dtype=tf.float32)
-            tf.compat.v1.logging.debug("miss_slot:%s" % k)
+            logger.debug("miss_slot:%s" % k)
         if k in mask_dict:
             emb_map[k] = mask_emb(emb_map[k], mask_dict[k])
-            tf.compat.v1.logging.debug("mask_slot:%s" % k)
-        tf.compat.v1.logging.debug("emb_shape>>>%s>>>%s" % (k, emb_map[k].shape))
+            logger.debug("mask_slot:%s" % k)
+        logger.debug("emb_shape>>>%s>>>%s" % (k, emb_map[k].shape))
         emb_map[k] = tf.reduce_sum(emb_map[k], axis=1)
 
     ######################predictions################################
     with tf.name_scope("dnn"):
         model = DnnModel(emb_map, features, slot_list, is_training)
+    if params["mode"] in ["hash", "emb"]:
+        model.predictions = {
+            "str": tf.concat(hash_collision_inps, axis=0),
+            "hash": tf.concat(feature_list, axis=0),
+        }
+        if params["mode"] == "emb":
+            model.predictions["emb"] = tf.concat([emb_map[k] for k in slot_list], axis=0)
     # predictions = {"id": tf.reshape(ids, (-1,)), "out": flat_emb}
     ######################metrics################################
     global_step = tf.compat.v1.train.get_or_create_global_step()
@@ -146,7 +160,7 @@ def model_fn(features, labels, mode, params):
     ######################train################################
     _hooks = None
     if params["warm_path"]:
-        tf.compat.v1.logging.info("%s warm start>>>%s" % (mode, params["warm_path"]))
+        logger.info("%s warm start>>>%s" % (mode, params["warm_path"]))
         # restore_hook = de.WarmStartHook(params["warm_path"], [".*emb.*"])
         restore_hook = RestoreTfraVariableHook(params["warm_path"], [embeddings])
         _hooks = [restore_hook]
@@ -163,11 +177,11 @@ def model_fn(features, labels, mode, params):
         sparse_vars = [var for var in trainable_variables if var.name.startswith("lookup")]
         global_variables = tf.compat.v1.get_collection(tf.compat.v1.GraphKeys.GLOBAL_VARIABLES)
 
-        tf.compat.v1.logging.debug("trainable_variables>>>%s" % trainable_variables)
-        tf.compat.v1.logging.debug("dense_vars>>>%s" % dense_vars)
-        tf.compat.v1.logging.debug("sparse_vars>>>%s" % sparse_vars)
-        tf.compat.v1.logging.debug("global_vars>>>%s" % global_variables)
-        tf.compat.v1.logging.debug("#" * 100)
+        logger.debug("trainable_variables>>>%s" % trainable_variables)
+        logger.debug("dense_vars>>>%s" % dense_vars)
+        logger.debug("sparse_vars>>>%s" % sparse_vars)
+        logger.debug("global_vars>>>%s" % global_variables)
+        logger.debug("#" * 100)
 
         dense_op = dense_opt.minimize(model.loss, global_step=global_step, var_list=dense_vars)
         if params["type"] == "join":
@@ -178,7 +192,7 @@ def model_fn(features, labels, mode, params):
         else:
             raise RuntimeError("Unsupport type", params["type"])
 
-        log_hook = tf.compat.v1.estimator.LoggingTensorHook(loggings, every_n_iter=500)
+        log_hook = tf.compat.v1.estimator.LoggingTensorHook(loggings, every_n_iter=10)
         ######################WarmStartHook################################
         return tf.estimator.EstimatorSpec(
             mode=mode, predictions=model.predictions, loss=model.loss,

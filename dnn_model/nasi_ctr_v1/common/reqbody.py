@@ -10,7 +10,7 @@ tf = tf.compat.v1
 if __name__ == "__main__":
     tf.disable_v2_behavior()
     # from flags import FLAGS
-    file_pattern = ["/data/lixiang/rm_show_click_v2/2023/12/01/part-r-00000"]
+    file_pattern = ["/Users/lixiang/Downloads/part-r-00000"]
     next_element = input_fn(file_pattern, batch_size=1, shuffle=False)
 
     tmp = []
@@ -27,7 +27,7 @@ if __name__ == "__main__":
         except tf.errors.OutOfRangeError:
             print("end!")
 
-    serialized_examples = tmp[0]
+    serialized_examples = tmp[1]
     for k, v in serialized_examples.items():
         if isinstance(v[0], bytes):
             serialized_examples[k] = v[0].decode("utf-8")

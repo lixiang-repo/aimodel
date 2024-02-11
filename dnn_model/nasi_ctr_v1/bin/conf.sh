@@ -1,4 +1,4 @@
-start_date=202312312359
+start_date=202401012359
 end_date=203012012359
 delta=24
 infer_delta=48
