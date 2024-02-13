@@ -21,12 +21,15 @@ class DnnModel:
         self.labels = [label1]
         # emb_map = {k: tf.keras.layers.Dropout(0.2)(emb_map[k]) for k in emb_map}
         ######################pop features不用特征################################
-
-        #ui_etype = emb_map.pop("ui_etype")
-        #slot_list.remove("ui_etype")
-        input_emb = tf.concat([tf.multiply(tf.Variable(1.0, name="GateW_%s" % k), emb_map[k]) for k in slot_list], axis=1)
+        input_embs = []
+        for k in slot_list:
+            w = tf.Variable(1.0, name="GateW_%s" % k)
+            emb = tf.reduce_sum(emb_map[k], axis=1)
+            inp = tf.multiply(w, emb)
+            input_embs.append(inp)
         ######################forward################################
-        outs = [self.build_layers(input_emb, [512, 512, 512, 512, 256, 256], "hid" "relu")]
+        input_emb = tf.concat(input_embs, axis=1)
+        outs = [self.build_layers(input_emb, [512, 512, 512, 512, 256, 256], "hid", "relu")]
         self.logits = []
         for i, out in enumerate(outs, start=1):
             logit = self.build_layers(out, [256, 128, 1], "task%s" % i)

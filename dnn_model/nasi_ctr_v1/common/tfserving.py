@@ -6,10 +6,10 @@ import grpc
 from tensorflow_serving.apis import predict_pb2, prediction_service_pb2_grpc
 import tensorflow as tf
 
-tfrecord_path = "/Users/lixiang/Downloads/part-r-00000"
+tfrecord_path = "/data/lixiang/rm_show_click_v2/2023/12/01/part-r-00000"
 
 
-channel = grpc.insecure_channel("tfserving:8001")
+channel = grpc.insecure_channel("localhost:8500")
 stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
 examples = []
 options = tf.io.TFRecordOptions()

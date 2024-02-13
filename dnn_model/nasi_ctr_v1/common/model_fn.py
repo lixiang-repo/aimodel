@@ -19,18 +19,15 @@ def build_bucket_custom(features, feature_name, boundary):
     for index in range(len(boundary)):
         temp_data = tf.cast(tf.ones_like(features[feature_name]), tf.float32) * (index + 1)
         value_data = tf.cast(tf.ones_like(features[feature_name]), tf.float32) * boundary[index]
-        raw_data = tf.where(tf.cast(features[feature_name], tf.float32) >= value_data, temp_data, raw_data)
+        raw_data = tf.where(tf.greater_equal(tf.cast(features[feature_name], tf.float32), value_data), temp_data, raw_data)
     return tf.cast(raw_data, dtype=tf.int64)
 
 
 def mask_tensor(tensor, padding="_"):
-    mask = tf.where(tensor == padding, tf.zeros_like(tensor, dtype=tf.float32), tf.ones_like(tensor, dtype=tf.float32))
+    # mask = tf.where(tensor == padding, tf.zeros_like(tensor, dtype=tf.float32), tf.ones_like(tensor, dtype=tf.float32))
+    padding = tf.constant(padding, dtype=tf.string)
+    mask = tf.where(tf.equal(tensor, padding), tf.zeros_like(tensor, dtype=tf.float32), tf.ones_like(tensor, dtype=tf.float32))
     return mask
-
-
-def mask_emb(emb, mask):
-    mask = tf.tile(tf.expand_dims(mask, 2), [1, 1, emb.shape[-1]])
-    return tf.multiply(mask, emb)
 
 
 def model_fn(features, labels, mode, params):
@@ -43,7 +40,6 @@ def model_fn(features, labels, mode, params):
     if is_training:
         devices_info = ["/job:ps/replica:0/task:{}/CPU:0".format(i) for i in range(params["ps_num"])]
         initializer = tf.compat.v1.random_normal_initializer(0, 1)
-        
     else:
         devices_info = ["/job:localhost/replica:0/task:{}/CPU:0".format(0) for i in range(params["ps_num"])]
         initializer = tf.compat.v1.zeros_initializer()
@@ -120,15 +116,13 @@ def model_fn(features, labels, mode, params):
     emb_map = dict(zip(slot_list, emb_splits))
     slot = params["slot"]
     for k in slot_list:
-        if k == slot:
-            emb_map[slot] = tf.zeros_like(emb_map[slot], dtype=tf.float32)
-            logger.debug("miss_slot:%s" % k)
-        if k in mask_dict:
-            emb_map[k] = mask_emb(emb_map[k], mask_dict[k])
-            logger.debug("mask_slot:%s" % k)
         logger.debug("emb_shape>>>%s>>>%s" % (k, emb_map[k].shape))
-        emb_map[k] = tf.reduce_sum(emb_map[k], axis=1)
-
+        if k == slot:
+            logger.debug("miss_slot:%s" % k)
+            emb_map[slot] = tf.zeros_like(emb_map[slot], dtype=tf.float32)
+        if k in mask_dict:
+            logger.debug("mask_slot:%s" % k)
+            emb_map[k] = emb_map[k] * tf.expand_dims(mask_dict[k], 2)
     ######################predictions################################
     with tf.name_scope("dnn"):
         model = DnnModel(emb_map, features, slot_list, is_training)
@@ -138,7 +132,7 @@ def model_fn(features, labels, mode, params):
             "hash": tf.concat(feature_list, axis=0),
         }
         if params["mode"] == "emb":
-            model.predictions["emb"] = tf.concat([emb_map[k] for k in slot_list], axis=0)
+            model.predictions["emb"] = tf.concat([tf.reduce_sum(emb_map[k], axis=1) for k in slot_list], axis=0)
     # predictions = {"id": tf.reshape(ids, (-1,)), "out": flat_emb}
     ######################metrics################################
     global_step = tf.compat.v1.train.get_or_create_global_step()

@@ -162,9 +162,9 @@ def main(argv):
         filenames = glob.glob("%s/%s" % (FLAGS.data_path, time_format))
         i = 0
         while len(filenames) < 5:
-            i += 1
             if i % 100 == 0:
                 logger.info("file not exits %s %s" % ("%s/%s" % (FLAGS.data_path, time_format), filenames))
+            i += 1
             time.sleep(300)
             filenames = glob.glob("%s/%s" % (FLAGS.data_path, time_format))
     else:
