@@ -38,7 +38,7 @@ class DnnModel:
             self.logits.append(logit)
 
         ######################################################
-        self.probs = [tf.sigmoid(logit) for logit in self.logits]
+        self.probs = [tf.sigmoid(logit) for logit in self.logits] #1/(w/p-w+1)
         self.outputs = self.probs[0]#tf.concat([self.probs[0], self.probs[1]], axis=-1)
         self.loss = 0
         for i, (label, logit) in enumerate(zip(self.labels, self.logits), start=1):
