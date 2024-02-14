@@ -39,7 +39,10 @@ class DnnModel:
 
         ######################################################
         self.probs = [tf.sigmoid(logit) for logit in self.logits] #1/(w/p-w+1)
-        self.outputs = self.probs[0]#tf.concat([self.probs[0], self.probs[1]], axis=-1)
+        self.outputs = {
+            "output%s" % i: prob for i, prob in enumerate(self.probs, start=1)
+        }
+        self.outputs["output"] = self.probs[0]
         self.loss = 0
         for i, (label, logit) in enumerate(zip(self.labels, self.logits), start=1):
             loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=label, logits=logit))
