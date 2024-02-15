@@ -12,16 +12,12 @@ dirname = os.path.dirname(os.path.abspath(__file__))
 
 def _parse_type(type_str):
     type_str = type_str.upper()
-    if type_str == 'INT':
-        return tf.int64
-    elif type_str == 'BIGINT':
-        return tf.int64
-    elif type_str == 'DOUBLE':
-        return tf.float64
+    if type_str == 'STRING':
+        return tf.string
     elif type_str == 'FLOAT':
         return tf.float32
-    elif type_str == 'STRING':
-        return tf.string
+    elif type_str == 'LONG':
+        return tf.int64
     else:
         arr_re = re.compile("ARRAY<(.*)>\(?(\d*)\)?")
         t = arr_re.findall(type_str)

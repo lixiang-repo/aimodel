@@ -1,16 +1,17 @@
 #!/usr/bin/env python
 # coding=utf-8
-import json
+import json, os, re
 
 from dataset import input_fn, get_example_fmt
 import tensorflow as tf
 tf = tf.compat.v1
 
+dirname = os.path.dirname(os.path.abspath(__file__))
 
 if __name__ == "__main__":
     tf.disable_v2_behavior()
     # from flags import FLAGS
-    file_pattern = ["/Users/lixiang/Downloads/part-r-00000"]
+    file_pattern = ["/data/lixiang/data/nasi_ctr_v3/20240215/part-r-00000"]
     next_element = input_fn(file_pattern, batch_size=1, shuffle=False)
 
     tmp = []
@@ -27,27 +28,41 @@ if __name__ == "__main__":
         except tf.errors.OutOfRangeError:
             print("end!")
 
-    serialized_examples = tmp[1]
-    for k, v in serialized_examples.items():
-        if isinstance(v[0], bytes):
-            serialized_examples[k] = v[0].decode("utf-8")
-        else:
-            serialized_examples[k] = v[0]
-
+    serialized_examples = tmp[0]
     with open("./body.json") as f:
         body = json.load(f)
 
-    for k in body["userInfo"]["userMap"]:
-        if k not in serialized_examples: continue
-        body["userInfo"]["userMap"][k] = serialized_examples[k]
+    body["userInfo"]["userMap"] = {}
+    body["userInfo"]["contextMap"] = {}
+    body["map"]["recall"][0]["map"] = {}
+    with open("%s/../schema.conf" % dirname) as f:
+        for line in f:
+            if line.startswith("#") or line.startswith("label"):
+                continue
 
-    for k in body["userInfo"]["contextMap"]:
-        if k not in serialized_examples: continue
-        body["userInfo"]["contextMap"][k] = serialized_examples[k]
+            k = re.split(" +", line)[0]
+            dtype = re.split(" +", line)[1]
+            v = serialized_examples[k]
+            print("lx>>>", k, dtype,  ">>>", v)
+            if "ARRAY<STRING>" in line:
+                v = ",".join(map(lambda x: x.decode(), v.tolist()[0]))
+            elif "ARRAY<FLOAT>" in line:
+                v = ",".join(map(lambda x: str(float(x)), v.tolist()[0]))
+            elif "ARRAY<LONG>" in line:
+                v = ",".join(map(lambda x: str(int(x)), v.tolist()[0]))
+            elif "STRING" in line:
+                v = v[0].decode()
+            elif "FLOAT" in line:
+                v = str(float(v[0]))
+            elif "LONG" in line:
+                v = str(int(v[0]))
 
-    for k in body["map"]["recall"][0]["map"]:
-        if k not in serialized_examples: continue
-        body["map"]["recall"][0]["map"][k] = serialized_examples[k]
+            if "@user" in line:
+                body["userInfo"]["userMap"][k] = v
+            if "@ctx" in line:
+                body["userInfo"]["contextMap"][k] = v
+            if "@item" in line:
+                body["map"]["recall"][0]["map"][k] = v
 
     with open("./body.json", "w") as wf:
         json.dump(body, wf, indent=4)
