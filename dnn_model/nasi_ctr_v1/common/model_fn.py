@@ -45,13 +45,22 @@ def model_fn(features, labels, mode, params):
         initializer = tf.compat.v1.zeros_initializer()
     if len(devices_info) == 0: devices_info = None
     logger.info("------ dynamic_embedding devices_info is {}-------".format(devices_info))
-    ######################slot reshape################################
+    ######################schema_set################################
+    schema_set = list()
+    with open("%s/../slot.conf" % dirname) as f:
+        for l in f:
+            if l.startswith("#") or l.startswith("label"):
+                continue
+            l = re.split(" +", l.strip("\n"))[0].split("-")
+            schema_set.extend(l)
+    schema_set = set(schema_set)
+    #################################################################
     # (None,), (None, 50)
     mask_dict = {}
     text_map = {}
     for k in features:
         logger.debug("features>>>%s>>>%s>>>%s" % (k, features[k].shape, features[k].dtype))
-        if k.startswith("label"):
+        if k.startswith("label") or k not in schema_set:
             continue
         text_map[k] = features[k]
         ############bucketing#########
@@ -125,7 +134,7 @@ def model_fn(features, labels, mode, params):
             emb_map[k] = emb_map[k] * tf.expand_dims(mask_dict[k], 2)
     ######################predictions################################
     with tf.name_scope("dnn"):
-        model = DnnModel(emb_map, features, slot_list, is_training)
+        model = DnnModel(features, emb_map, mask_dict, slot_list, is_training)
     if params["mode"] in ["hash", "emb"]:
         model.predictions = {
             "str": tf.concat(hash_collision_inps, axis=0),
