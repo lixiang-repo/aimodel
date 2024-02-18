@@ -12,6 +12,7 @@ from tqdm import tqdm
 import os, sys
 import datetime
 import argparse
+from collections import Counter
 
 import warnings
 
@@ -101,6 +102,45 @@ def map_union(lst):
         ans.update(x)
     return ans
 
+def map_reduce(lst):
+    """
+    {
+        "time": 'unixtime'
+        "imp": {
+            "cnt": 10,
+            "hour": {1: 2, 23: 5},
+            "adid": {"ad1": 5, "ad2": 10}
+        },
+        "clk": {
+            "cnt": 10,
+            "hour": {1: 2, 23: 5},
+            "adid": {"ad1": 5, "ad2": 10}
+        }
+    }
+    """
+    def reduce(x, y):
+        ans = {"time": max(x.get("time", -1), y.get("time", -1))}
+        for evt in list(set(list(x.keys()) + list(y.keys()))):
+            if evt in x and evt in y:
+                ans[evt] = {"cnt": x[evt].get("cnt", 0) + y[evt].get("cnt", 0)}
+                keys = list(set(list(x[evt].keys()) + list(y[evt].keys())))
+                for k in keys:
+                    if k != "cnt":
+                        if k in x[evt] and k in y[evt]:
+                            ans[evt][k] = dict(Counter(x[evt][k]) + Counter(y[evt][k]))
+                        elif k in x[evt]:
+                            ans[evt][k] = x[evt][k]
+                        elif k in y[evt]:
+                            ans[evt][k] = y[evt][k]
+            elif evt in x:
+                ans[evt] = x[evt]
+            elif evt in y:
+                ans[evt] = y[evt]
+        return ans
+    ans = {}
+    for x in lst:
+        ans = reduce(ans, x)
+    return ans
 
 contexts = ['display', 'cid', 'bundle', 'pub', 'subcat', 'adid', 'advertiser_id', 'tagid', 'size', 'crid',
             'make', 'state', 'adtype', 'month', 'camera_pixels', 'osv', 'reward', 'appcat', 'os', 'chipset',

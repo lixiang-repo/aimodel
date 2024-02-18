@@ -165,7 +165,7 @@ def main(args):
         data = df.join(user_df, df.deviceid == user_df.uid, "left")
 
         for k, dtype in user_df.dtypes:
-            if k.startswith("u_"):
+            if k != "uid":
                 if dtype == 'array<string>':
                     data = data.withColumn(k, F.udf(lambda x: ["_"] * 50 if x is None else x, returnType=ArrayType(StringType()))(k))
                 elif dtype == 'string':
