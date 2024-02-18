@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 import os
-
+import pandas as pd
+import datetime
+from collections import Counter
 os.environ['SPARK_HOME'] = '/opt/cloudera/parcels/CDH/lib/spark3'
 # os.environ['SPARK_CONF_DIR'] = '/etc/spark/conf'
 # os.environ['HADOOP_CONF_DIR'] = '/etc/spark/conf/yarn-conf:/etc/hive/conf'
@@ -48,6 +50,64 @@ def exec_cmd(cmd):
             print("执行Shell命令失败", "cmd>>>%s" % cmd)
     except Exception as e:
         print("发生错误：", str(e), "cmd>>>%s" % cmd)
+
+def map_union(lst):
+    ans = {}
+    for x in lst:
+        ans.update(x)
+    return ans
+
+def weight_decay(x):
+    for evt in list(x.keys()):
+        if evt == "time":
+            continue
+        x[evt]["cnt"] = x[evt].get("cnt", 0) * 0.98
+        for k in x[evt].keys():
+            if k != "cnt":
+                x[evt][k] = (pd.Series(x[evt][k]) * 0.98).to_dict()
+    return x
+
+def map_reduce(lst):
+    """
+    {
+        "time": 'unixtime'
+        "imp": {
+            "cnt": 10,
+            "hour": {1: 2, 23: 5},
+            "adid": {"ad1": 5, "ad2": 10}
+        },
+        "clk": {
+            "cnt": 10,
+            "hour": {1: 2, 23: 5},
+            "adid": {"ad1": 5, "ad2": 10}
+        }
+    }
+    """
+    def reduce(x, y):
+        ans = {"time": max(x.get("time", -1), y.get("time", -1))}
+        for evt in list(set(list(x.keys()) + list(y.keys()))):
+            if evt == "time":
+                continue
+            if evt in x and evt in y:
+                ans[evt] = {"cnt": x[evt].get("cnt", 0) + y[evt].get("cnt", 0)}
+                keys = list(set(list(x[evt].keys()) + list(y[evt].keys())))
+                for k in keys:
+                    if k != "cnt":
+                        if k in x[evt] and k in y[evt]:
+                            ans[evt][k] = dict(Counter(x[evt][k]) + Counter(y[evt][k]))
+                        elif k in x[evt]:
+                            ans[evt][k] = x[evt][k]
+                        elif k in y[evt]:
+                            ans[evt][k] = y[evt][k]
+            elif evt in x:
+                ans[evt] = x[evt]
+            elif evt in y:
+                ans[evt] = y[evt]
+        return ans
+    ans = {}
+    for x in lst:
+        ans = reduce(ans, x)
+    return ans
 
 
 def set_spark(task, flags):
