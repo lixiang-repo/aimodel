@@ -1,17 +1,15 @@
-start_date=202401012359
-end_date=203012012359
+#start_date=20231001
+start_date=20230928
+start_date=20240416
+#start_date=20240101
+backup=20230401
 delta=24
-infer_delta=48
-time_format=%Y%m%d/part*
+infer_delta=24
 code_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && cd .. && pwd)"
 task=$(basename ${code_dir})
-model_dir="/data/lixiang/model/${task}"
-nas_path="/data/lixiang/data/${task}"
+model_dir="/data/share/model/${task}"
 ############################################################################################################
 ############################################################################################################
-donefile=${model_dir}/donefile
-
-mkdir -p ${model_dir} > /dev/null
 mkdir -p ${model_dir}/logs > /dev/null
 
-touch ${donefile}
+conda activate env

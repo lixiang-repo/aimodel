@@ -1,0 +1,4431 @@
+{
+  "inputs": {
+    "user__kv_ad_idea_id_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_width_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_adslot_id_imp_cnt_15d": [
+      "8623",
+      "25513",
+      "17775",
+      "8702",
+      "24807",
+      "8217"
+    ],
+    "item__kv_ip_city_clk_cnt_7d": [
+      "0.0",
+      "1",
+      "1",
+      "0.0",
+      "0.0",
+      "1"
+    ],
+    "item__kv_ip_city_imp_cnt_1d": [
+      "53",
+      "181",
+      "155",
+      "48",
+      "192",
+      "62"
+    ],
+    "user__kv_app_version_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_adslot_id_clk_cnt_7d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "item__kv_channel_id_clk_div_imp_cnt_15d": [
+      "0.0088",
+      "0.0065",
+      "0.0066",
+      "0.0067",
+      "0.0107",
+      "0.0073"
+    ],
+    "user__kv_idea_label_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_country_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_version_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_height_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_adslot_id_imp_cnt_1d": [
+      "5979",
+      "21999",
+      "15829",
+      "7224",
+      "22266",
+      "7595"
+    ],
+    "item__kv_channel_id_clk_cnt_1d": [
+      "62",
+      "155",
+      "103",
+      "42",
+      "244",
+      "53"
+    ],
+    "item__kv_dsp_id_imp_cnt_15d": [
+      "8623",
+      "25513",
+      "17775",
+      "8702",
+      "24807",
+      "8217"
+    ],
+    "item__kv_device_carrier_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_dynamic_tmplate_type_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_is_new_user_imp_cnt_15d": [
+      "8492",
+      "25192",
+      "17399",
+      "8524",
+      "24375",
+      "8061"
+    ],
+    "item__kv_network_imp_cnt_15d": [
+      "2090",
+      "13454",
+      "1911",
+      "1945",
+      "2737",
+      "2445"
+    ],
+    "user__kv_channel_code_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "is_new_user": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_network_clk_div_imp_cnt_15d": [
+      "0.0033",
+      "0.0047",
+      "0.0084",
+      "0.0026",
+      "0.0106",
+      "0.0045"
+    ],
+    "item__kv_device_os_version_clk_cnt_1d": [
+      "10",
+      "47",
+      "23",
+      "10",
+      "48",
+      "17"
+    ],
+    "item__imp_user_id_dcnt_7d": [
+      "7132",
+      "20424",
+      "14389",
+      "7459",
+      "20390",
+      "7334"
+    ],
+    "user__kv_ad_unit_id_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_level_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_element_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_day_h_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_model_clk_cnt_1d": [
+      "0.0",
+      "0.0",
+      "1",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "item__kv_device_os_version_clk_div_imp_cnt_15d": [
+      "0.0064",
+      "0.0065",
+      "0.0067",
+      "0.0062",
+      "0.0092",
+      "0.0115"
+    ],
+    "user__kv_industry_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_element_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_screen_height_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_custom_lp_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_first_industry_id_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_dynamic_tmplate_type_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_channel_code_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_name_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_package_name_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_type_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_custom_lp_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_screen_height_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_vivo_package_channel_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_day_h_clk_cnt_7d": [
+      "3",
+      "10",
+      "6",
+      "7",
+      "6",
+      "0.0"
+    ],
+    "user__imp_combination_un_id_dcnt_1d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_is_new_item_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_height_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_is_new_user_clk_div_imp_cnt_1d": [
+      "0.0105",
+      "0.007",
+      "0.0066",
+      "0.0059",
+      "0.0111",
+      "0.0071"
+    ],
+    "user__kv_idea_label_ids_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_video_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_oppo_package_channel_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_carrier_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__max_u_pv_7d": [
+      "38611.218946",
+      "131614.176732",
+      "82846.669488",
+      "63452.755218",
+      "41323.309079",
+      "56516.850862"
+    ],
+    "user__kv_template_id_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "device_brand": [
+      "vivo",
+      "vivo",
+      "vivo",
+      "vivo",
+      "vivo",
+      "vivo"
+    ],
+    "user__kv_landingurl_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_unit_id_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_os_version_clk_div_imp_cnt_1d": [
+      "0.0059",
+      "0.0068",
+      "0.0068",
+      "0.0065",
+      "0.0086",
+      "0.012"
+    ],
+    "ad_plan_id": [
+      "3726",
+      "3726",
+      "3726",
+      "3726",
+      "3726",
+      "3726"
+    ],
+    "user__kv_oppo_package_channel_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__clk_combination_un_id_dcnt_15d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__kv_week_day_clk_div_imp_cnt_15d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "item__kv_device_screen_height_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_os_version_clk_cnt_7d": [
+      "15",
+      "49",
+      "26",
+      "12",
+      "57",
+      "18"
+    ],
+    "keywords": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_template_element_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_unit_id_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_landingurl_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__clk_cnt_15d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "channel_code": [
+      "xmlm-bcyjs-01",
+      "xmlm-bcyjs-01",
+      "xmlm-bcyjs-01",
+      "xmlm-bcyjs-01",
+      "xmlm-bcyjs-01",
+      "xmlm-bcyjs-01"
+    ],
+    "user__kv_ad_idea_id_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_style_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "app_logo": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_idea_style_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_country_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_video_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_custom_lp_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_channel_code_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_is_new_user_clk_div_imp_cnt_7d": [
+      "0.0088",
+      "0.0065",
+      "0.0067",
+      "0.0068",
+      "0.0108",
+      "0.0074"
+    ],
+    "user__kv_idea_label_ids_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "image": [
+      "https://img.adprod.cn/idea-img/3614583bea505c4ecb91f68095c35b980mce0vcl.jpg",
+      "https://img.adprod.cn/idea-img/3d4436400b045773ace9fbeb2719a3d4dqs7wi78.jpg",
+      "https://img.adprod.cn/idea-img/b69a0d0a201a5aacf4548f548d756f9fc7sqw0k1.jpg",
+      "https://img.adprod.cn/idea-img/99dfd477bcc42f82adfe310b3a9140aftkkeduzj.jpg",
+      "https://img.adprod.cn/idea-img/9b572e82c595e7d90915ab8e7fe3f60123lqc5gf.jpg",
+      "https://img.adprod.cn/idea-img/dae6c8fad907bead01f534a4bb8efb269sy86b4t.jpg"
+    ],
+    "user__kv_app_logo_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_adslot_id_imp_cnt_7d": [
+      "8623",
+      "25513",
+      "17775",
+      "8702",
+      "24807",
+      "8217"
+    ],
+    "item__kv_device_os_imp_cnt_1d": [
+      "5979",
+      "21999",
+      "15829",
+      "7224",
+      "22266",
+      "7595"
+    ],
+    "user__kv_vivo_package_channel_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_element_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_id_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_vivo_package_channel_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_id_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_unit_id_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_plan_id_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_os_clk_cnt_1d": [
+      "62",
+      "155",
+      "103",
+      "42",
+      "244",
+      "53"
+    ],
+    "user__kv_oppo_package_channel_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_label_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_week_day_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_video_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__avg_u_pv_1d": [
+      "4364.94473",
+      "9243.453608",
+      "7763.776704",
+      "5533.688848",
+      "6150.219",
+      "6881.242747"
+    ],
+    "device_model": [
+      "vivo iQOO Neo8",
+      "vivo iQOO Neo8",
+      "vivo iQOO Neo8",
+      "vivo iQOO Neo8",
+      "vivo iQOO Neo8",
+      "vivo iQOO Neo8"
+    ],
+    "item__kv_device_screen_width_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_os_version_clk_cnt_15d": [
+      "15",
+      "49",
+      "26",
+      "12",
+      "57",
+      "18"
+    ],
+    "user__kv_ad_plan_id_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "title": [
+      "让爪机焕然一新",
+      "让爪机焕然一新",
+      "让爪机焕然一新",
+      "它便是“救命菜”，谁若遇见，别用脚踩踏了，希望尊重它",
+      "女子在家种西瓜，西瓜成熟后，摘下切开后哭笑不得",
+      "女子上山搬回一块怪石，丈夫仔细看后大呼不得了！"
+    ],
+    "user__kv_app_version_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "content": [
+      "让爪机焕然一新",
+      "让爪机焕然一新",
+      "让爪机焕然一新",
+      "它便是“救命菜”，谁若遇见，别用脚踩踏了，希望尊重它",
+      "女子在家种西瓜，西瓜成熟后，摘下切开后哭笑不得",
+      "女子上山搬回一块怪石，丈夫仔细看后大呼不得了！"
+    ],
+    "user__kv_idea_label_ids_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_day_h_clk_cnt_15d": [
+      "3",
+      "10",
+      "6",
+      "7",
+      "6",
+      "0.0"
+    ],
+    "item__kv_app_pkg_src_clk_cnt_15d": [
+      "4",
+      "4",
+      "5",
+      "0.0",
+      "2",
+      "1"
+    ],
+    "user__kv_template_width_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_logo_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_channel_id_imp_cnt_15d": [
+      "8623",
+      "25513",
+      "17775",
+      "8702",
+      "24807",
+      "8217"
+    ],
+    "user__kv_idea_label_ids_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_idea_id_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__sum_u_pv_1d": [
+      "270626.573244",
+      "1432735.309223",
+      "791905.223796",
+      "232414.931591",
+      "1494503.216994",
+      "364705.865554"
+    ],
+    "item__kv_ip_country_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_oppo_package_channel_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_day_h_imp_cnt_7d": [
+      "310",
+      "2169",
+      "1050",
+      "409",
+      "946",
+      "167"
+    ],
+    "user__kv_day_h_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__clk_cnt_15d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__imp_user_id_dcnt_15d": [
+      "7132",
+      "20424",
+      "14389",
+      "7459",
+      "20390",
+      "7334"
+    ],
+    "item__kv_device_model_clk_div_imp_cnt_15d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "user__kv_template_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_model_imp_cnt_1d": [
+      "0.0",
+      "264",
+      "117",
+      "42",
+      "171",
+      "100"
+    ],
+    "item__kv_network_clk_div_imp_cnt_1d": [
+      "0.0021",
+      "0.0049",
+      "0.0086",
+      "0.0019",
+      "0.0105",
+      "0.0044"
+    ],
+    "item__kv_week_day_imp_cnt_15d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "user__kv_vivo_package_channel_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_video_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "landingurl": [
+      "https://static.ttlaosiji.cn/hap_youdian/jsql/index.html#/dp1?JPLink=pages/read/read-dp&cid=40&channel=8_3003_8_1&subchannel=dsp_1&brandD=2&straId=2&hap=hap://app/com.ttdnj.cold.knowledge.app/pages/splash&productType=3003",
+      "https://static.ttlaosiji.cn/hap_youdian/jsql/index.html#/dp1?JPLink=pages/read/read-dp&cid=40&channel=8_3003_8_1&subchannel=dsp_1&brandD=2&straId=2&hap=hap://app/com.ttdnj.cold.knowledge.app/pages/splash&productType=3003",
+      "https://static.ttlaosiji.cn/hap_youdian/jsql/index.html#/dp1?JPLink=pages/read/read-dp&cid=40&channel=8_3003_8_1&subchannel=dsp_1&brandD=2&straId=2&hap=hap://app/com.ttdnj.cold.knowledge.app/pages/splash&productType=3003",
+      "https://static.ttlaosiji.cn/hap_youdian/jsql/index.html#/dp1?JPLink=pages/read/read-dp&cid=40&channel=8_3003_8_1&subchannel=dsp_1&brandD=2&straId=2&hap=hap://app/com.ttdnj.cold.knowledge.app/pages/splash&productType=3003",
+      "https://static.ttlaosiji.cn/hap_youdian/jsql/index.html#/dp1?JPLink=pages/read/read-dp&cid=40&channel=8_3003_8_1&subchannel=dsp_1&brandD=2&straId=2&hap=hap://app/com.ttdnj.cold.knowledge.app/pages/splash&productType=3003",
+      "https://static.ttlaosiji.cn/hap_youdian/jsql/index.html#/dp1?JPLink=pages/read/read-dp&cid=40&channel=8_3003_8_1&subchannel=dsp_1&brandD=2&straId=2&hap=hap://app/com.ttdnj.cold.knowledge.app/pages/splash&productType=3003"
+    ],
+    "user__kv_template_element_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_day_h_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_week_day_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_idea_id_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "device_carrier": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_app_level_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_vivo_package_channel_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__avg_u_pv_15d": [
+      "5646.883113",
+      "8997.53265",
+      "7789.985259",
+      "6179.556412",
+      "5852.399211",
+      "7602.976537"
+    ],
+    "user__kv_custom_lp_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_video_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_oppo_package_channel_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_idea_id_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_custom_lp_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "custom_lp": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_template_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_first_industry_id_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_os_imp_cnt_15d": [
+      "8623",
+      "25513",
+      "17775",
+      "8702",
+      "24807",
+      "8217"
+    ],
+    "item__kv_device_carrier_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "day_h": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "item__max_u_pv_1d": [
+      "38611.218946",
+      "131614.176732",
+      "82846.669488",
+      "63452.755218",
+      "41323.309079",
+      "56516.850862"
+    ],
+    "item__kv_week_day_imp_cnt_7d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "item__min_u_pv_15d": [
+      "4.0",
+      "1.0",
+      "15.365288",
+      "49.038443",
+      "0.857375",
+      "8.15538"
+    ],
+    "user__kv_video_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_channel_id_imp_cnt_1d": [
+      "5979",
+      "21999",
+      "15829",
+      "7224",
+      "22266",
+      "7595"
+    ],
+    "user__kv_idea_style_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__clk_user_id_dcnt_7d": [
+      "76",
+      "165",
+      "116",
+      "58",
+      "265",
+      "60"
+    ],
+    "user__kv_industry_id_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_day_h_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_adslot_id_clk_div_imp_cnt_7d": [
+      "0.0088",
+      "0.0065",
+      "0.0066",
+      "0.0067",
+      "0.0107",
+      "0.0073"
+    ],
+    "user_id": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__clk_cnt_1d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__kv_device_screen_width_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_image_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "channel_id": [
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9"
+    ],
+    "user__kv_idea_label_ids_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "template": [
+      "信息流大图描述1280*720",
+      "信息流大图描述1280*720",
+      "信息流大图描述1280*720",
+      "信息流大图描述1280*720",
+      "信息流大图描述1280*720",
+      "信息流大图描述1280*720"
+    ],
+    "ip_region": [
+      "广西",
+      "广西",
+      "广西",
+      "广西",
+      "广西",
+      "广西"
+    ],
+    "user__kv_ad_plan_id_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__imp_cnt_15d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_app_logo_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_unit_id_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_plan_id_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_dsp_id_clk_div_imp_cnt_1d": [
+      "0.0104",
+      "0.007",
+      "0.0065",
+      "0.0058",
+      "0.011",
+      "0.007"
+    ],
+    "user__kv_landingurl_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_dsp_id_clk_cnt_7d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "item__kv_dsp_id_imp_cnt_1d": [
+      "5979",
+      "21999",
+      "15829",
+      "7224",
+      "22266",
+      "7595"
+    ],
+    "user__kv_video_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_country_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_carrier_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_type_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_region_clk_div_imp_cnt_1d": [
+      "0.0068",
+      "0.0023",
+      "0.0076",
+      "0.0",
+      "0.0072",
+      "0.0065"
+    ],
+    "item__kv_device_os_imp_cnt_7d": [
+      "8623",
+      "25513",
+      "17775",
+      "8702",
+      "24807",
+      "8217"
+    ],
+    "user__kv_template_element_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_id_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_app_pkg_src_imp_cnt_15d": [
+      "1335",
+      "2742",
+      "2578",
+      "1155",
+      "1772",
+      "643"
+    ],
+    "user__kv_app_version_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_os_clk_cnt_15d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "user__kv_template_type_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_product_name_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "dsp_id": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "user__kv_template_type_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_week_day_clk_cnt_1d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "user__kv_package_name_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_week_day_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_style_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_unit_id_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_dsp_id_clk_cnt_1d": [
+      "62",
+      "155",
+      "103",
+      "42",
+      "244",
+      "53"
+    ],
+    "user__kv_product_name_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_style_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_id_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_week_day_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "template_element": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__kv_device_os_version_imp_cnt_1d": [
+      "1694",
+      "6926",
+      "3372",
+      "1529",
+      "5576",
+      "1411"
+    ],
+    "user__kv_industry_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_carrier_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_landingurl_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_logo_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_label_ids_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__sum_u_pv_7d": [
+      "429163.116568",
+      "1493590.41977",
+      "903638.289965",
+      "358414.271855",
+      "1550885.790875",
+      "456178.592173"
+    ],
+    "user__kv_image_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_image_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_is_new_user_clk_div_imp_cnt_15d": [
+      "0.0088",
+      "0.0065",
+      "0.0067",
+      "0.0068",
+      "0.0108",
+      "0.0074"
+    ],
+    "logo": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_template_width_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_video_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_channel_code_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_image_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_package_name_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_logo_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_height_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__imp_cnt_1d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__kv_ip_country_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_logo_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_level_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_logo_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "device_screen_width": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_package_name_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "device_os_version": [
+      "13",
+      "13",
+      "13",
+      "13",
+      "13",
+      "13"
+    ],
+    "user__kv_first_industry_id_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_plan_id_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_package_name_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_oppo_package_channel_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__avg_u_pv_7d": [
+      "5646.883113",
+      "8997.53265",
+      "7789.985259",
+      "6179.556412",
+      "5852.399211",
+      "7602.976537"
+    ],
+    "user__kv_video_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_day_h_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_os_version_clk_div_imp_cnt_7d": [
+      "0.0064",
+      "0.0065",
+      "0.0067",
+      "0.0062",
+      "0.0092",
+      "0.0115"
+    ],
+    "user__kv_app_level_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "ip_country": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_custom_lp_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__max_u_pv_15d": [
+      "38611.218946",
+      "131614.176732",
+      "82846.669488",
+      "63452.755218",
+      "41323.309079",
+      "56516.850862"
+    ],
+    "user__kv_app_level_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_style_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_width_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_id_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_height_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_id_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_first_industry_id_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_width_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_style_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_idea_id_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_week_day_imp_cnt_1d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "item__min_u_pv_7d": [
+      "4.0",
+      "1.0",
+      "15.365288",
+      "49.038443",
+      "0.857375",
+      "8.15538"
+    ],
+    "item__kv_device_screen_height_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_id_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_version_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_country_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__sum_u_pv_15d": [
+      "429163.116568",
+      "1493590.41977",
+      "903638.289965",
+      "358414.271855",
+      "1550885.790875",
+      "456178.592173"
+    ],
+    "device_os": [
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2"
+    ],
+    "user__kv_template_element_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_package_name_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_adslot_id_clk_div_imp_cnt_1d": [
+      "0.0104",
+      "0.007",
+      "0.0065",
+      "0.0058",
+      "0.011",
+      "0.007"
+    ],
+    "user__kv_channel_code_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_product_name_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_adslot_id_clk_div_imp_cnt_15d": [
+      "0.0088",
+      "0.0065",
+      "0.0066",
+      "0.0067",
+      "0.0107",
+      "0.0073"
+    ],
+    "item__kv_device_os_clk_cnt_7d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "item__kv_dsp_id_imp_cnt_7d": [
+      "8623",
+      "25513",
+      "17775",
+      "8702",
+      "24807",
+      "8217"
+    ],
+    "user__kv_image_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_type_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_label_ids_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_channel_id_clk_div_imp_cnt_7d": [
+      "0.0088",
+      "0.0065",
+      "0.0066",
+      "0.0067",
+      "0.0107",
+      "0.0073"
+    ],
+    "user__kv_product_name_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__imp_user_id_dcnt_1d": [
+      "4896",
+      "18003",
+      "13097",
+      "6267",
+      "18653",
+      "6814"
+    ],
+    "item__kv_device_carrier_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_day_h_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_type_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_level_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_package_name_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_name_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_label_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_dsp_id_clk_div_imp_cnt_7d": [
+      "0.0088",
+      "0.0065",
+      "0.0066",
+      "0.0067",
+      "0.0107",
+      "0.0073"
+    ],
+    "user__kv_ad_plan_id_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_model_clk_cnt_15d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "item__kv_device_model_clk_div_imp_cnt_1d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "user__kv_product_name_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_height_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_brand_imp_cnt_1d": [
+      "5979",
+      "21999",
+      "15829",
+      "7224",
+      "22265",
+      "7595"
+    ],
+    "user__kv_idea_label_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_region_clk_cnt_7d": [
+      "3",
+      "1",
+      "3",
+      "0.0",
+      "5",
+      "1"
+    ],
+    "item__kv_device_screen_height_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_region_imp_cnt_1d": [
+      "147",
+      "429",
+      "394",
+      "164",
+      "553",
+      "155"
+    ],
+    "u_pv": [
+      "410.137689",
+      "410.137689",
+      "410.137689",
+      "410.137689",
+      "410.137689",
+      "410.137689"
+    ],
+    "user__kv_logo_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_is_new_item_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_week_day_clk_cnt_7d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "user__kv_week_day_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_id_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_app_pkg_src_imp_cnt_7d": [
+      "1335",
+      "2742",
+      "2578",
+      "1155",
+      "1772",
+      "643"
+    ],
+    "item__kv_ip_country_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_type_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_custom_lp_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "vivo_package_channel": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_landingurl_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_week_day_clk_div_imp_cnt_7d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "user__kv_channel_code_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_dynamic_tmplate_type_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "week_day": [
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2"
+    ],
+    "item__kv_app_pkg_src_clk_div_imp_cnt_7d": [
+      "0.003",
+      "0.0015",
+      "0.0019",
+      "0.0",
+      "0.0011",
+      "0.0016"
+    ],
+    "user__kv_image_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_is_new_user_imp_cnt_1d": [
+      "5899",
+      "21712",
+      "15490",
+      "7067",
+      "21880",
+      "7455"
+    ],
+    "item__kv_channel_id_clk_div_imp_cnt_1d": [
+      "0.0104",
+      "0.007",
+      "0.0065",
+      "0.0058",
+      "0.011",
+      "0.007"
+    ],
+    "template_width": [
+      "1280",
+      "1280",
+      "1280",
+      "1280",
+      "1280",
+      "1280"
+    ],
+    "item__clk_cnt_1d": [
+      "62",
+      "155",
+      "103",
+      "42",
+      "244",
+      "53"
+    ],
+    "user__kv_vivo_package_channel_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "industry": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__imp_cnt_15d": [
+      "8623",
+      "25513",
+      "17775",
+      "8702",
+      "24807",
+      "8217"
+    ],
+    "user__clk_combination_un_id_dcnt_7d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_first_industry_id_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_dsp_id_clk_cnt_15d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "idea_label_ids": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "device_screen_height": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_template_width_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_id_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_screen_width_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_dynamic_tmplate_type_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__clk_user_id_dcnt_1d": [
+      "62",
+      "154",
+      "102",
+      "42",
+      "243",
+      "53"
+    ],
+    "item__kv_network_clk_cnt_15d": [
+      "7",
+      "63",
+      "16",
+      "5",
+      "29",
+      "11"
+    ],
+    "user__kv_is_new_item_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_is_new_item_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_carrier_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_height_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__clk_cnt_7d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_template_id_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_carrier_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_screen_height_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_country_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_brand_clk_div_imp_cnt_1d": [
+      "0.0104",
+      "0.007",
+      "0.0065",
+      "0.0058",
+      "0.011",
+      "0.007"
+    ],
+    "user__kv_logo_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_level_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_logo_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "template_id": [
+      "37",
+      "37",
+      "37",
+      "37",
+      "37",
+      "37"
+    ],
+    "item__kv_adslot_id_clk_cnt_15d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "item__kv_device_screen_width_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_network_imp_cnt_1d": [
+      "1455",
+      "12782",
+      "1391",
+      "1598",
+      "2097",
+      "2290"
+    ],
+    "user__kv_app_level_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_image_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_logo_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "oppo_package_channel": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__kv_day_h_imp_cnt_15d": [
+      "310",
+      "2169",
+      "1050",
+      "409",
+      "946",
+      "167"
+    ],
+    "user__kv_first_industry_id_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "app_version": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_idea_label_ids_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_plan_id_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__clk_combination_un_id_dcnt_1d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_first_industry_id_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_dynamic_tmplate_type_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_custom_lp_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "app_level": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__clk_cnt_7d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "user__kv_is_new_item_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_region_clk_div_imp_cnt_7d": [
+      "0.0155",
+      "0.0019",
+      "0.0068",
+      "0.0",
+      "0.0082",
+      "0.0062"
+    ],
+    "item__kv_channel_id_imp_cnt_7d": [
+      "8623",
+      "25513",
+      "17775",
+      "8702",
+      "24807",
+      "8217"
+    ],
+    "adslot_id": [
+      "v.undp.ys",
+      "v.undp.ys",
+      "v.undp.ys",
+      "v.undp.ys",
+      "v.undp.ys",
+      "v.undp.ys"
+    ],
+    "user__kv_week_day_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_id_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "template_type": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "user__kv_app_level_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__min_u_pv_1d": [
+      "8.28389",
+      "1.0",
+      "15.365288",
+      "51.836208",
+      "0.857375",
+      "8.15538"
+    ],
+    "user__kv_dynamic_tmplate_type_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "app_pkg_src": [
+      "com.shuqi.controller",
+      "com.shuqi.controller",
+      "com.shuqi.controller",
+      "com.shuqi.controller",
+      "com.shuqi.controller",
+      "com.shuqi.controller"
+    ],
+    "user__kv_is_new_item_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_element_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "ad_idea_id": [
+      "115050",
+      "115051",
+      "115052",
+      "112734",
+      "112727",
+      "112732"
+    ],
+    "item__kv_ip_city_clk_cnt_15d": [
+      "0.0",
+      "1",
+      "1",
+      "0.0",
+      "0.0",
+      "1"
+    ],
+    "user__kv_first_industry_id_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_height_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_screen_width_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_channel_id_clk_cnt_15d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "item__kv_device_os_version_imp_cnt_15d": [
+      "2362",
+      "7528",
+      "3885",
+      "1933",
+      "6197",
+      "1569"
+    ],
+    "user__kv_day_h_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_logo_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_brand_clk_div_imp_cnt_7d": [
+      "0.0088",
+      "0.0065",
+      "0.0066",
+      "0.0067",
+      "0.0107",
+      "0.0073"
+    ],
+    "user__kv_template_type_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "combination_un_id": [
+      "268049",
+      "268058",
+      "268048",
+      "268054",
+      "268057",
+      "268056"
+    ],
+    "item__kv_device_screen_width_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_version_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "name": [
+      "1.2.8-快应用",
+      "1.2.8-快应用",
+      "1.2.8-快应用",
+      "1.2.8-信息流大图-快手",
+      "1.2.8-原生信息流大图-快手",
+      "1.2.8-信息流大图-快手"
+    ],
+    "user__kv_product_name_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_name_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "industry_id": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__kv_device_os_clk_div_imp_cnt_7d": [
+      "0.0088",
+      "0.0065",
+      "0.0066",
+      "0.0067",
+      "0.0107",
+      "0.0073"
+    ],
+    "item__kv_is_new_user_clk_cnt_15d": [
+      "75",
+      "163",
+      "116",
+      "58",
+      "264",
+      "60"
+    ],
+    "item__kv_dsp_id_clk_div_imp_cnt_15d": [
+      "0.0088",
+      "0.0065",
+      "0.0066",
+      "0.0067",
+      "0.0107",
+      "0.0073"
+    ],
+    "user__kv_app_logo_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_idea_id_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "video": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__kv_device_os_version_imp_cnt_7d": [
+      "2362",
+      "7528",
+      "3885",
+      "1933",
+      "6197",
+      "1569"
+    ],
+    "user__kv_dynamic_tmplate_type_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_image_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_logo_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_is_new_item_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_idea_id_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_unit_id_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_style_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_day_h_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_label_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_app_pkg_src_imp_cnt_1d": [
+      "1032",
+      "2483",
+      "2352",
+      "891",
+      "1501",
+      "538"
+    ],
+    "user__imp_combination_un_id_dcnt_15d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__imp_cnt_7d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_template_id_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_product_name_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_brand_clk_cnt_7d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "user__kv_channel_code_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_week_day_clk_div_imp_cnt_1d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "item__kv_device_model_clk_div_imp_cnt_7d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "user__kv_industry_id_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_label_ids_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_name_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_network_clk_cnt_1d": [
+      "3",
+      "62",
+      "12",
+      "3",
+      "22",
+      "10"
+    ],
+    "package_name": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__kv_device_screen_width_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_city_clk_div_imp_cnt_15d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0159"
+    ],
+    "user__kv_week_day_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_logo_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_plan_id_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_type_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_logo_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "idea_style": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_package_name_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_is_new_user_clk_cnt_7d": [
+      "75",
+      "163",
+      "116",
+      "58",
+      "264",
+      "60"
+    ],
+    "user__kv_industry_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_vivo_package_channel_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_os_clk_div_imp_cnt_1d": [
+      "0.0104",
+      "0.007",
+      "0.0065",
+      "0.0058",
+      "0.011",
+      "0.007"
+    ],
+    "item__kv_ip_city_clk_div_imp_cnt_1d": [
+      "0.0",
+      "0.0",
+      "0.0065",
+      "0.0",
+      "0.0",
+      "0.0161"
+    ],
+    "first_industry_id": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__kv_ip_region_clk_cnt_15d": [
+      "3",
+      "1",
+      "3",
+      "0.0",
+      "5",
+      "1"
+    ],
+    "item__kv_day_h_clk_cnt_1d": [
+      "3",
+      "10",
+      "6",
+      "7",
+      "6",
+      "0.0"
+    ],
+    "user__kv_vivo_package_channel_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__imp_combination_un_id_dcnt_7d": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_dynamic_tmplate_type_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_oppo_package_channel_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_screen_height_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_screen_width_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_id_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_style_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_network_clk_div_imp_cnt_7d": [
+      "0.0033",
+      "0.0047",
+      "0.0084",
+      "0.0026",
+      "0.0106",
+      "0.0045"
+    ],
+    "item__kv_device_model_clk_cnt_7d": [
+      "0.0",
+      "0.0",
+      "1",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "item__kv_network_imp_cnt_7d": [
+      "2090",
+      "13454",
+      "1911",
+      "1945",
+      "2737",
+      "2445"
+    ],
+    "item__kv_device_carrier_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_name_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_label_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_ad_plan_id_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_city_imp_cnt_7d": [
+      "64",
+      "213",
+      "169",
+      "55",
+      "202",
+      "63"
+    ],
+    "user__kv_industry_id_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_region_imp_cnt_15d": [
+      "193",
+      "523",
+      "440",
+      "193",
+      "609",
+      "162"
+    ],
+    "user__kv_app_version_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_screen_height_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_package_name_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_name_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_city_imp_cnt_15d": [
+      "64",
+      "213",
+      "169",
+      "55",
+      "202",
+      "63"
+    ],
+    "user__kv_idea_label_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_app_version_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_region_clk_cnt_1d": [
+      "1",
+      "1",
+      "3",
+      "0.0",
+      "4",
+      "1"
+    ],
+    "item__imp_cnt_7d": [
+      "8623",
+      "25513",
+      "17775",
+      "8702",
+      "24807",
+      "8217"
+    ],
+    "user__kv_custom_lp_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_week_day_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_brand_imp_cnt_7d": [
+      "8623",
+      "25512",
+      "17775",
+      "8702",
+      "24805",
+      "8217"
+    ],
+    "user__kv_logo_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_adslot_id_clk_cnt_1d": [
+      "62",
+      "155",
+      "103",
+      "42",
+      "244",
+      "53"
+    ],
+    "user__kv_idea_label_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_height_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_app_pkg_src_clk_div_imp_cnt_1d": [
+      "0.0039",
+      "0.0016",
+      "0.0021",
+      "0.0",
+      "0.0013",
+      "0.0019"
+    ],
+    "item__kv_day_h_clk_div_imp_cnt_1d": [
+      "0.0097",
+      "0.0046",
+      "0.0057",
+      "0.0171",
+      "0.0063",
+      "0.0"
+    ],
+    "item__kv_week_day_clk_cnt_15d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    "user__kv_product_name_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "dynamic_tmplate_type": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "user__kv_channel_code_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_channel_id_clk_cnt_7d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "user__kv_is_new_item_clk_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_width_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_city_clk_cnt_1d": [
+      "0.0",
+      "1",
+      "1",
+      "0.0",
+      "0.0",
+      "1"
+    ],
+    "ip_city": [
+      "南宁市",
+      "南宁市",
+      "南宁市",
+      "南宁市",
+      "南宁市",
+      "南宁市"
+    ],
+    "item__kv_is_new_user_imp_cnt_7d": [
+      "8492",
+      "25192",
+      "17399",
+      "8524",
+      "24375",
+      "8061"
+    ],
+    "user__kv_app_logo_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_landingurl_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_app_pkg_src_clk_cnt_1d": [
+      "4",
+      "4",
+      "5",
+      "0.0",
+      "2",
+      "1"
+    ],
+    "user__kv_image_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_brand_clk_cnt_15d": [
+      "76",
+      "166",
+      "118",
+      "58",
+      "266",
+      "60"
+    ],
+    "item__kv_ip_region_clk_div_imp_cnt_15d": [
+      "0.0155",
+      "0.0019",
+      "0.0068",
+      "0.0",
+      "0.0082",
+      "0.0062"
+    ],
+    "user__kv_app_version_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_screen_width_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "is_new_item": [
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    "idea_label": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "item__kv_device_brand_clk_div_imp_cnt_15d": [
+      "0.0088",
+      "0.0065",
+      "0.0066",
+      "0.0067",
+      "0.0107",
+      "0.0073"
+    ],
+    "item__kv_device_screen_height_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_app_pkg_src_clk_div_imp_cnt_15d": [
+      "0.003",
+      "0.0015",
+      "0.0019",
+      "0.0",
+      "0.0011",
+      "0.0016"
+    ],
+    "user__kv_ad_idea_id_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_channel_code_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_dynamic_tmplate_type_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "ad_unit_id": [
+      "45215",
+      "45215",
+      "45215",
+      "45215",
+      "45215",
+      "45215"
+    ],
+    "item__imp_cnt_1d": [
+      "5979",
+      "21999",
+      "15829",
+      "7224",
+      "22266",
+      "7595"
+    ],
+    "user__kv_name_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_week_day_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_is_new_item_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_brand_imp_cnt_15d": [
+      "8623",
+      "25512",
+      "17775",
+      "8702",
+      "24805",
+      "8217"
+    ],
+    "user__kv_product_name_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_idea_label_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_day_h_clk_div_imp_cnt_7d": [
+      "0.0097",
+      "0.0046",
+      "0.0057",
+      "0.0171",
+      "0.0063",
+      "0.0"
+    ],
+    "user__kv_oppo_package_channel_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__clk_user_id_dcnt_15d": [
+      "76",
+      "165",
+      "116",
+      "58",
+      "265",
+      "60"
+    ],
+    "item__kv_app_pkg_src_clk_cnt_7d": [
+      "4",
+      "4",
+      "5",
+      "0.0",
+      "2",
+      "1"
+    ],
+    "item__kv_device_os_clk_div_imp_cnt_15d": [
+      "0.0088",
+      "0.0065",
+      "0.0066",
+      "0.0067",
+      "0.0107",
+      "0.0073"
+    ],
+    "user__kv_name_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_vivo_package_channel_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_width_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_day_h_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_day_h_imp_cnt_1d": [
+      "310",
+      "2169",
+      "1050",
+      "409",
+      "946",
+      "167"
+    ],
+    "product_name": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_template_width_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_device_brand_clk_cnt_1d": [
+      "62",
+      "155",
+      "103",
+      "42",
+      "244",
+      "53"
+    ],
+    "template_height": [
+      "720",
+      "720",
+      "720",
+      "720",
+      "720",
+      "720"
+    ],
+    "item__kv_is_new_user_clk_cnt_1d": [
+      "62",
+      "152",
+      "102",
+      "42",
+      "242",
+      "53"
+    ],
+    "item__kv_device_model_imp_cnt_15d": [
+      "53",
+      "275",
+      "142",
+      "57",
+      "191",
+      "111"
+    ],
+    "user__kv_oppo_package_channel_clk_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_network_clk_cnt_7d": [
+      "7",
+      "63",
+      "16",
+      "5",
+      "29",
+      "11"
+    ],
+    "item__kv_device_model_imp_cnt_7d": [
+      "53",
+      "275",
+      "142",
+      "57",
+      "191",
+      "111"
+    ],
+    "user__kv_ad_unit_id_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_region_imp_cnt_7d": [
+      "193",
+      "523",
+      "440",
+      "193",
+      "609",
+      "162"
+    ],
+    "user__kv_ad_unit_id_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_landingurl_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_landingurl_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_template_element_clk_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_country_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "network": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_clk_div_imp_cnt_7d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_day_h_clk_div_imp_cnt_15d": [
+      "0.0097",
+      "0.0046",
+      "0.0057",
+      "0.0171",
+      "0.0063",
+      "0.0"
+    ],
+    "user__kv_landingurl_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_industry_id_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "user__kv_name_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "action_text": [
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024",
+      "-1024"
+    ],
+    "user__kv_first_industry_id_clk_div_imp_cnt_1d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "item__kv_ip_city_clk_div_imp_cnt_7d": [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0159"
+    ],
+    "user__kv_template_height_clk_div_imp_cnt_15d": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "scoreList": [
+    0.021742493,
+    0.011638135,
+    0.018209517,
+    0.017596722,
+    0.021763295,
+    0.019899666
+  ],
+  "uid": "31e73100690f1c50448abb4b956bdb771cead7c2fea7ebaa3272077d2a60d8b3",
+  "requestId": "a9b6ed42ee7efcc0d6c469c79302ce49<>v.undp.ys",
+  "itemIdList": [
+    "268049",
+    "268058",
+    "268048",
+    "268054",
+    "268057",
+    "268056"
+  ],
+  "ts": 1712682913643
+}
